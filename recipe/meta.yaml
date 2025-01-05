@@ -11,7 +11,7 @@ source:
   sha256: 5446626673a9faecbf389fb411b90bdc87b002c387b72dc097b208e7a58f2a1c
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -31,7 +31,7 @@ test:
     - flake8_functions
   commands:
     - pip check
-    - flake8 --version # | grep flake8-functions
+    - flake8 --version  | grep flake8_functions
   requires:
     - flake8
     - m2-grep  # [win]
