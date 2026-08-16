@@ -1,5 +1,5 @@
 {% set name = "flake8-functions" %}
-{% set version = "0.0.8" %}
+{% set version = "0.1.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flake8_functions-{{ version }}.tar.gz
-  sha256: 5446626673a9faecbf389fb411b90bdc87b002c387b72dc097b208e7a58f2a1c
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/flake8_functions-{{ version }}.tar.gz
+  sha256: d4047bdf06c091b1156680505012d5c1139c9e52b2fefab7d5b18eea21e05f86
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
